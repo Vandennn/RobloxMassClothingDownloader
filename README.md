@@ -9,7 +9,7 @@ Once you install all of the requirements, Selenium, atleast for me seems to be b
 # Configuration
 For configuration, just replace the URL variable with the groups ***SEE ALL*** page. Not just their group link. When you look at a groups store there should be a button called **See All ->**.
 
-Once you are on the See All page copy the link which should look something like this: __https://www.roblox.com/catalog?Category=1&CreatorName=Aesthetic%20Aethers&CreatorType=Group__
+Once you are on the See All page copy the link which should look something like this: __https://www.roblox.com/catalog?Category=1&CreatorName=GROUPNAME&CreatorType=Group__
 
 After you have set your link run the script and it will download all of the clothes.
 
