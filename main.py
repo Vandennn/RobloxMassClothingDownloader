@@ -5,7 +5,7 @@ from urllib.parse import quote
 from pathvalidate import sanitize_filepath
 
 
-groupName = "TIX Clothing +"
+groupName = "NAME OF GROUP"
 
 
 def scanner(url):
