@@ -2,24 +2,25 @@
 Script to auto download an entire groups clothing (Shirts and Pants)
 
 # Setup
-To set this up run "pip -r requirements.txt"
-
-Once you install all of the requirements, Selenium, atleast for me seems to be buggy if I keep the main.py file inside of a subfolder, so if you plan to keep it in a subfolder then make sure to drag and drop the chromedriver.exe file into the same folder. If you don't, i.e. simply keeping the main.py in the downloads folder for example then just install the requirements.
+To set this up run "pip -r requirements.txt" and create a folder in the same folder where main.py is stored named "output".
 
 # Configuration
-For configuration, just replace the URL variable with the groups ***SEE ALL*** page. Not just their group link. When you look at a groups store there should be a button called **See All ->**.
-
-Once you are on the See All page copy the link which should look something like this: __https://www.roblox.com/catalog?Category=1&CreatorName=GROUPNAME&CreatorType=Group__
-
-After you have set your link run the script and it will download all of the clothes.
-
+For configuration, copy the name of the group you want to steal the clothing from and paste it into the groupName variable.
 # Features
-Auto-download multiple roblox shirts and pants at a time
+- Auto-download multiple roblox shirts and pants at a time
+- Saved clothing template will have shirt name set as it automatically (no need to name while uploading)
+- Very quick for downloading (if you aren't rate-limited)
 
-Saved clothing template will have shirt name set as it automatically (no need to name while uploading)
-
-Very quick for downloading (if you aren't rate-limited)
-
-# Credit
-While most of this script was mainly created by me, I did not create the section of code that grabs the jpg clothing image.
-That section was written by jedpep on his own roblox clothing downloader: __https://github.com/jedpep/Roblox-Mass-Clothing-Stealer__
+# Possible Issues
+Possible issues when using this script will be rate-limits, group and clothing names, and UGC hats.
+- For rate-limits simply wait a minute or two to re-run the script. Rate-limits will not occur with large amounts of clothing being downloaded, only when you re-run the script multiple times in a short period of time.
+- For group names if you are having issues with it and it's giving you errors, just copy it from the group URL and manually paste it into the scanner function.
+- For shirt names make an issue post and I will see why there is an issue with it and update the code.
+- For UGC hats I have yet to look at them but I will be updating this when I get the time (I am lazy).
+# To-Do
+- [ ] Auto-Upload downloaded clothing
+- [ ] Add auto rate-limit checker and re-executer for the script.
+- [ ] Make downloads faster
+- [ ] Watermark remover
+- [ ] UGC hat downloader
+- [ ] UGC hat filter
