@@ -1,5 +1,4 @@
-selenium
-time
-requests
-json
-cleantext
+beautifulsoup4==4.12.3
+cleantext==1.1.4
+pathvalidate==3.2.0
+Requests==2.32.3
