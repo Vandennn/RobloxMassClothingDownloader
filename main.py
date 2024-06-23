@@ -5,8 +5,9 @@ from urllib.parse import quote
 from pathvalidate import sanitize_filepath
 
 
-groupName = "NAME OF GROUP"
-
+groupName = "Aesthetic Aethers"
+shirtsOnly = False
+pantsOnly = True
 
 def scanner(url):
 	source = requests.get(url).text
@@ -19,7 +20,7 @@ def scanner(url):
 		linkList.append(url + "&cursor=" + nPC)
 		nPC = json.loads(requests.get(linkList[len(linkList)-1]).text)["nextPageCursor"]
 		#print(nPC)
-	print(linkList)
+	#print(linkList)
 	for link in linkList:
 		print(json.loads(requests.get(link).text)['data'])
 	for link in linkList:
@@ -34,4 +35,13 @@ def scanner(url):
 			with open('output/' + mainUser + '.png', 'wb') as f:
 				f.write(requests.get(json.loads(requests.get("https://assetdelivery.roblox.com/v1/assetId/" + code).text)['location']).content)
 	return urls
-scanner("https://catalog.roblox.com/v1/search/items?category=Clothing&creatorName=" + quote(groupName) + "&creatorType=Group&limit=120&salesTypeFilter=1&subcategory=ClassicShirts")
+
+if shirtsOnly == True and pantsOnly == True:
+	scanner("https://catalog.roblox.com/v1/search/items?category=Clothing&creatorName=" + quote(groupName) + "&creatorType=Group&limit=120&salesTypeFilter=1&subcategory=ClassicShirts")
+	scanner("https://catalog.roblox.com/v1/search/items?category=Clothing&creatorName=" + quote(groupName) + "&creatorType=Group&limit=120&salesTypeFilter=1&subcategory=ClassicPants")
+elif shirtsOnly == False and pantsOnly == False:
+	print("Please set shirtsOnly or pantsOnly to True")
+elif shirtsOnly == False:
+	scanner("https://catalog.roblox.com/v1/search/items?category=Clothing&creatorName=" + quote(groupName) + "&creatorType=Group&limit=120&salesTypeFilter=1&subcategory=ClassicPants")
+elif pantsOnly == False:
+	scanner("https://catalog.roblox.com/v1/search/items?category=Clothing&creatorName=" + quote(groupName) + "&creatorType=Group&limit=120&salesTypeFilter=1&subcategory=ClassicShirts")
