@@ -5,3 +5,4 @@ Requests==2.32.3
 json
 re
 random
+pillow
