@@ -5,7 +5,7 @@ from urllib.parse import quote
 from pathvalidate import sanitize_filepath
 
 
-groupName = "Aesthetic Aethers"
+groupName = "GROUP NAME"
 shirtsOnly = False
 pantsOnly = True
 
