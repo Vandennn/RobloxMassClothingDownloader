@@ -5,7 +5,7 @@ from urllib.parse import quote
 from pathvalidate import sanitize_filepath
 from PIL import Image
 
-groupName = "Aesthetic Aethers"
+groupName = "GROUP NAME"
 shirtsOnly = True
 pantsOnly = True
 removeWatermark = True
@@ -17,7 +17,7 @@ def imgSaver(name, code):
 
 def watermarkRemover(name):
 	mainImg = Image.open(r"output/" + name + ".png")
-	template = Image.open(r"C:\Users\Vanden\Desktop\massacc\template.png") 
+	template = Image.open(r"template.png") 
 	mainImg.paste(template, (0,0), mask = template)
 	mainImg.save("output/" + name + ".png")
 
