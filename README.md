@@ -21,6 +21,6 @@ Possible issues when using this script will be rate-limits, group and clothing n
 - [ ] Auto-Upload downloaded clothing
 - [ ] Add auto rate-limit checker and re-executer for the script.
 - [ ] Make downloads faster
-- [ ] Watermark remover
+- [x] Watermark remover
 - [ ] UGC hat downloader
 - [ ] UGC hat filter
