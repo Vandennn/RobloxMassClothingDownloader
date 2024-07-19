@@ -24,3 +24,6 @@ Possible issues when using this script will be rate-limits, group and clothing n
 - [x] Watermark remover
 - [ ] UGC hat downloader
 - [ ] UGC hat filter
+
+# DISCLAIMER
+I do not plan on being super active with this project. All projects I do on github are side projects and just for fun.
